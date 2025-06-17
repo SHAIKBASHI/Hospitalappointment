@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital Appointment Slot Board</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f9ff;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #1a73e8;
+    }
+
+    .doctor {
+      background: #fff;
+      padding: 20px;
+      border-left: 6px solid #1a73e8;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .doctor h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    .dept {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .slots {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .slot {
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #fff;
+      min-width: 90px;
+      text-align: center;
+    }
+
+    .available {
+      background-color: #34a853;
+    }
+
+    .booked {
+      background-color: #ea4335;
+    }
+
+    .pending {
+      background-color: #fbbc04;
+    }
+
+    .legend {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+
+    .legend .dot {
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .legend .available { background-color: #34a853; }
+    .legend .booked { background-color: #ea4335; }
+    .legend .pending { background-color: #fbbc04; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🏥 Doctor Appointment Slots</h1>
+
+    <div class="doctor">
+      <h2>Dr. Ayesha <span class="dept">(Cardiology)</span></h2>
+      <div class="slots">
+        <div class="slot available">9:00 AM</div>
+        <div class="slot booked">10:00 AM</div>
+        <div class="slot available">11:00 AM</div>
+      </div>
+    </div>
+
+    <div class="doctor">
+      <h2>Dr. Rahman <span class="dept">(ENT)</span></h2>
+      <div class="slots">
+        <div class="slot booked">9:00 AM</div>
+        <div class="slot available">10:00 AM</div>
+        <div class="slot pending">11:00 AM</div>
+      </div>
+    </div>
+
+    <div class="doctor">
+      <h2>Dr. Meena <span class="dept">(Dermatology)</span></h2>
+      <div class="slots">
+        <div class="slot pending">9:00 AM</div>
+        <div class="slot available">10:00 AM</div>
+        <div class="slot available">11:00 AM</div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <h3>Legend:</h3>
+      <span class="dot available"></span> Available
+      <span class="dot booked"></span> Booked
+      <span class="dot pending"></span> Pending
+    </div>
+  </div>
+</body>
+</html>
